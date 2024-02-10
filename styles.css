@@ -21,10 +21,37 @@ h1 > img {
     margin: -20px;
 }
 .orange {
+    z-index: 1;
     color: orange;
+    animation: slideInLeft 1s ease-in-out;
+    display: inline-block;
+}
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 .blue {
-    color: blue;
+    z-index: 2;
+    position: relative;
+    color: rgb(56, 118, 252);
+    animation: slideInRight 1s ease-in-out;
+    display: inline-block;
+}
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 #orangePortal {
     transform: rotate(-12deg);
@@ -41,7 +68,12 @@ h3 {
 }
 #timer {
     margin-top: -7px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
+
+
+/*Optimizing for mobile*/
 @media only screen and (max-width: 810px) {
     h1 {
         font-size: 24px;
@@ -107,7 +139,7 @@ h3 {
 @media only screen and (max-width: 400px) {
     h1 {
         margin-top: -20px;
-        font-size: 14px;
+        font-size: 15px;
     }
     #orangePortal {
         transform: rotate(-12deg);
@@ -154,7 +186,7 @@ footer {
 }
 #companionCube {
     display: inline-block;
-    width: 40px;
+    width: 30px;
     height: auto;
 }
   

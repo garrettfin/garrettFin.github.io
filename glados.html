@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Message from GLaDOS</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+    video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+    }
+    #backArrow {
+        position: fixed;
+        z-index: 1;
+        top: 5px;
+        left: 5px;
+        width: 40px;
+    }
+</style>
+</head>
+<body>
+    <a href="index.html"><img src="images/backArrow.png" id="backArrow"></a>
+    <video autoplay>
+        <source src="images/glados.mp4" type="video/mp4">
+    </video>
+</body>
+</html>
