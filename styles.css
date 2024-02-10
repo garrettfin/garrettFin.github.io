@@ -29,7 +29,7 @@ h1 > img {
 @keyframes slideInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-50px);
+        transform: translateX(-30px);
     }
     100% {
         opacity: 1;
@@ -46,7 +46,7 @@ h1 > img {
 @keyframes slideInRight {
     0% {
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(30px);
     }
     100% {
         opacity: 1;
