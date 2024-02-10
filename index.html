@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lauren and Garrett</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <img src="images/orangePortal.png" id ="orangePortal" width="60px" height="auto">
+            <span class="orange">Lauren Schaeffer</span>
+            <span>and</span>
+            <span class="blue">Garrett Finley</span>
+            <img src="images/bluePortal.png" id = "bluePortal" width="60px" height="auto">
+        </h1>
+        <h3>Testing Time:</h3>
+        <div id="timer"></div>
+        <div class="image-container">
+            <img class = "randomImage" id = "randomImage" src="/images/image (1).jpg">
+        </div>
+    </div>
+
+    <script>
+        window.onload = getRandomPhoto;
+        var photos = [
+                "images/image (1).jpg",
+                "images/image (2).jpg",
+                "images/image (3).jpg",
+                "images/image (4).jpg",
+                "images/image (5).jpg",
+                "images/image (6).jpg",
+                "images/image (7).jpg",
+                "images/image (8).jpg",
+                "images/image (9).jpg",
+                "images/image (10).jpg",
+                "images/image (11).jpg",
+                "images/image (12).jpg",
+                "images/image (13).jpg",
+                "images/image (14).jpg",
+                "images/image (15).jpg",
+                "images/image (16).jpg",
+                "images/image (17).jpg",
+                "images/image (18).jpg",
+                "images/image (19).jpg",
+                "images/image (20).jpg",
+                "images/image (21).jpg",
+                "images/image (22).jpg",
+                "images/image (23).jpg",
+                "images/image (24).jpg",
+                "images/image (25).jpg",
+                "images/image (26).jpg",
+                "images/image (27).jpg",
+                "images/image (28).jpg",
+                "images/image (29).jpg",
+                "images/image (30).jpg",
+                "images/image (31).jpg",
+                "images/image (32).jpg",
+                "images/image (33).jpg",
+                "images/image (34).jpg",
+                "images/image (35).jpg",
+                "images/image (36).jpg",
+                "images/image (37).jpg",
+                "images/image (38).jpg",
+                "images/image (39).jpg",
+                "images/image (40).jpg",
+                "images/image (41).jpg",
+                "images/image (42).jpg",
+                "images/image (43).jpg",
+                "images/image (44).jpg",
+                "images/image (45).jpg",
+                "images/image (46).jpg",
+                "images/image (47).jpg",
+                "images/image (48).jpg",
+                "images/image (49).jpg",
+                "images/image (50).jpg",
+                "images/image (51).jpg",
+                "images/image (52).jpg",
+                "images/image (53).jpg",
+                "images/image (54).jpg",
+                "images/image (55).jpg",
+                "images/image (56).jpg",
+            ];
+
+        // Function to fetch a random photo
+        function getRandomPhoto() {
+            var randomIndex = Math.floor(Math.random() * photos.length);
+            document.getElementById("randomImage").src = photos[randomIndex];
+        }
+    </script>
+
+    <script>
+        // Set the start date for the timer (YYYY-MM-DD format)
+        var startDate = new Date('2022-08-29');
+
+        // Function to update the timer display
+        function updateTimer() {
+            var currentDate = new Date();
+            var elapsedTime = currentDate - startDate;
+            var seconds = Math.floor((elapsedTime / 1000) % 60);
+            var minutes = Math.floor((elapsedTime / (1000 * 60)) % 60);
+            var hours = Math.floor((elapsedTime / (1000 * 60 * 60)) % 24);
+            var days = Math.floor(elapsedTime / (1000 * 60 * 60 * 24) % 365.25);
+            var years = Math.floor(elapsedTime / (1000 * 60 * 60 * 24 * 365.25));
+
+            // Display the elapsed time
+            document.getElementById('timer').innerHTML = years + " year(s), " + days + " days, " + 
+                hours + " hours, " + minutes + " minutes, and " + seconds + " seconds";
+        }
+
+        // Call updateTimer every second
+        setInterval(updateTimer, 1000);
+
+        // Initial call to updateTimer to display timer immediately
+        updateTimer();
+    </script>
+
+</body>
+
+<footer>
+    <img src="images/companionCube.png" id="companionCube">
+</footer>
+
+</html>
